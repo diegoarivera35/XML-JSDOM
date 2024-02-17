@@ -1,0 +1,9 @@
+extends layout
+
+block main-content
+  - let PlacemarkName = placemark.querySelector("name").textContent;
+  - let description = placemark.querySelector("description").textContent;
+  - let address = placemark.querySelector("address").textContent;
+  -h1 #{PlacemarkName}
+  -p #{description}
+  -p #{address}

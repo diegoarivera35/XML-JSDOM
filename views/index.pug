@@ -1,0 +1,15 @@
+extends layout
+
+block main-content
+  //- h1 Parks 
+  //- each park in parks
+  //-   - let parkId = park.querySelector("LocationID").textContent; 
+  //-   - let parkName = park.querySelector("LocationName").textContent;
+  //-   div 
+  //-     a(href=`/park/${parkId}`) #{parkName}
+  h1 Placemarks 
+  each placemark in placemarks
+    - let placemarkName = placemark.querySelector("name").textContent; 
+    - let placemarkId = placemark.getAttribute("id");
+    div 
+      a(href=`/placemark/${placemarkId}`) #{placemarkName}
